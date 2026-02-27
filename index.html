@@ -1,58 +1,214 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutrição Esportiva | Performance e Saúde</title>
+    <title>Nutrição Esportiva</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para ícones (opcional, mas usado) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
     <header>
-        <h1>Nutricionista Esportiva</h1>
-        <p>Otimizando resultados através da ciência da nutrição</p>
+        <div class="container">
+            <h1><i class="fas fa-apple-alt"></i> Nutri<span class="destaque">Esporte</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active" data-tab="home">Home</a></li>
+                    <li><a href="#sobre" data-tab="sobre">Sobre</a></li>
+                    <li><a href="#nota" data-tab="nota">Nota de Corte</a></li>
+                    <li><a href="#salario" data-tab="salario">Salário</a></li>
+                    <li><a href="#ingressao" data-tab="ingressao">Como Ingressar</a></li>
+                    <li><a href="#faculdades" data-tab="faculdades">Faculdades</a></li>
+                    <li><a href="#galeria" data-tab="galeria">Galeria</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="container">
-        
-        <section class="gallery">
-            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=500&q=80" alt="Treino Funcional">
-            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=500&q=80" alt="Alimentação Saudável">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=500&q=80" alt="Esporte e Foco">
+    <main class="container">
+        <!-- Seção Home (Página Inicial) -->
+        <section id="home" class="tab-content active-content">
+            <div class="hero">
+                <div class="hero-text">
+                    <h2>Nutrição Esportiva: <span class="destaque">Alimentando o Potencial</span></h2>
+                    <p>Descubra como a ciência da nutrição potencializa o desempenho atlético e transforma vidas através da alimentação estratégica.</p>
+                    <a href="#sobre" class="btn" data-tab-link="sobre">Saiba Mais</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Atleta se exercitando">
+                </div>
+            </div>
         </section>
 
-        <div class="tabs-container">
-            <div class="tabs-nav">
-                <button class="tab-button active" onclick="openTab(event, 'sobre')">A Profissão</button>
-                <button class="tab-button" onclick="openTab(event, 'objetivos')">Foco do Atendimento</button>
-                <button class="tab-button" onclick="openTab(event, 'beneficios')">Benefícios</button>
+        <!-- Seção Sobre -->
+        <section id="sobre" class="tab-content">
+            <h2 class="section-title">Sobre a Profissão</h2>
+            <div class="sobre-grid">
+                <div>
+                    <p>O nutricionista esportivo é o profissional responsável por planejar, implementar e avaliar dietas e estratégias nutricionais para atletas e praticantes de atividade física. Seu objetivo é otimizar o desempenho, acelerar a recuperação, prevenir lesões e promover a saúde a longo prazo.</p>
+                    <p>Este especialista trabalha em conjunto com educadores físicos, médicos e fisioterapeutas para entender as demandas energéticas de cada modalidade e as necessidades individuais de cada paciente.</p>
+                    <ul class="lista-check">
+                        <li><i class="fas fa-check-circle"></i> Avaliação da composição corporal</li>
+                        <li><i class="fas fa-check-circle"></i> Periodização nutricional</li>
+                        <li><i class="fas fa-check-circle"></i> Suplementação baseada em evidências</li>
+                        <li><i class="fas fa-check-circle"></i> Educação alimentar do atleta</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Planejamento de refeições" class="img-radius">
+                </div>
             </div>
+        </section>
 
-            <div id="sobre" class="tab-content active">
-                <h3>O que faz o Nutricionista Esportivo?</h3>
-                <p>O nutricionista esportivo é o profissional especializado em aplicar conhecimentos de nutrição, fisiologia e bioquímica para melhorar o desempenho físico e a saúde.</p>
+        <!-- Seção Nota de Corte ENEM -->
+        <section id="nota" class="tab-content">
+            <h2 class="section-title">Nota de Corte no ENEM</h2>
+            <div class="card-container">
+                <div class="card">
+                    <i class="fas fa-university fa-3x" style="color: var(--primary);"></i>
+                    <h3>Média Nacional</h3>
+                    <p class="dado-numero">650 - 720 pontos</p>
+                    <p>A nota de corte para Nutrição varia conforme a universidade e a concorrência. As federais mais concorridas exigem notas mais altas.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-trophy fa-3x" style="color: var(--primary);"></i>
+                    <h3>Mais Concorridas</h3>
+                    <p class="dado-numero">700 - 750+ pontos</p>
+                    <p>Universidades como USP, UNICAMP, UFMG e UFRGS costumam ter as maiores notas de corte.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-chart-line fa-3x" style="color: var(--primary);"></i>
+                    <h3>Ampla Concorrência</h3>
+                    <p class="dado-numero">Média de 680 pts</p>
+                    <p>Dados do Sisu 2024. Lembrando que as notas variam a cada semestre.</p>
+                </div>
             </div>
+        </section>
 
-            <div id="objetivos" class="tab-content">
-                <h3>Áreas de Atuação</h3>
-                <ul>
-                    <li><strong>Hipertrofia:</strong> Ganho de massa muscular estratégico.</li>
-                    <li><strong>Emagrecimento:</strong> Queima de gordura com performance.</li>
-                    <li><strong>Endurance:</strong> Estratégias para esportes de longa duração.</li>
-                </ul>
+        <!-- Seção Salário -->
+        <section id="salario" class="tab-content">
+            <h2 class="section-title">Média Salarial</h2>
+            <div class="card-container">
+                <div class="card">
+                    <i class="fas fa-chart-bar fa-3x" style="color: var(--primary);"></i>
+                    <h3>Início de Carreira</h3>
+                    <p class="dado-numero">R$ 2.500 - R$ 3.500</p>
+                    <p>Para recém-formados ou atuação em clubes menores e academias.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-star fa-3x" style="color: var(--primary);"></i>
+                    <h3>Consultoria Esportiva</h3>
+                    <p class="dado-numero">R$ 4.000 - R$ 7.000</p>
+                    <p>Atendimento a atletas de alto rendimento e equipes.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-crown fa-3x" style="color: var(--primary);"></i>
+                    <h3>Alto Nível / Clubes Grandes</h3>
+                    <p class="dado-numero">R$ 8.000 - R$ 15.000+</p>
+                    <p>Profissionais renomados e com especialização consolidada.</p>
+                </div>
             </div>
+            <p class="fonte">*Fonte: Pesquisa salarial CRN e sites de emprego (valores aproximados).</p>
+        </section>
 
-            <div id="beneficios" class="tab-content">
-                <h3>Por que investir?</h3>
-                <p>✅ Maior disposição nos treinos.</p>
-                <p>✅ Recuperação muscular acelerada.</p>
-                <p>✅ Melhora da composição corporal.</p>
+        <!-- Seção Como Ingressar -->
+        <section id="ingressao" class="tab-content">
+            <h2 class="section-title">Como Ingressar na Carreira</h2>
+            <div class="ingressao-grid">
+                <div class="passos">
+                    <div class="passo">
+                        <span class="passo-numero">1</span>
+                        <div class="passo-conteudo">
+                            <h3>Graduação em Nutrição</h3>
+                            <p>O primeiro passo é cursar o bacharelado em Nutrição, que dura em média 4 a 5 anos. O diploma é obrigatório para o exercício da profissão.</p>
+                        </div>
+                    </div>
+                    <div class="passo">
+                        <span class="passo-numero">2</span>
+                        <div class="passo-conteudo">
+                            <h3>Registro no CRN</h3>
+                            <p>Após a formatura, é necessário se registrar no Conselho Regional de Nutrição (CRN) da sua região para estar legalmente habilitado.</p>
+                        </div>
+                    </div>
+                    <div class="passo">
+                        <span class="passo-numero">3</span>
+                        <div class="passo-conteudo">
+                            <h3>Especialização</h3>
+                            <p>Invista em uma pós-graduação em Nutrição Esportiva, Fisiologia do Exercício ou áreas correlatas para se destacar no mercado.</p>
+                        </div>
+                    </div>
+                    <div class="passo">
+                        <span class="passo-numero">4</span>
+                        <div class="passo-conteudo">
+                            <h3>Experiência Prática</h3>
+                            <p>Busque estágios em clubes, academias ou com profissionais consolidados. A prática é fundamental.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ingressao-image">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Estudante se formando">
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+
+        <!-- Seção Faculdades -->
+        <section id="faculdades" class="tab-content">
+            <h2 class="section-title">Onde Estudar?</h2>
+            <div class="faculdades-grid">
+                <div class="faculdade-item">
+                    <h3><i class="fas fa-university"></i> Universidade de São Paulo (USP)</h3>
+                    <p><strong>Local:</strong> São Paulo, SP</p>
+                    <p>Referência nacional em pesquisa e ensino.</p>
+                </div>
+                <div class="faculdade-item">
+                    <h3><i class="fas fa-university"></i> Universidade Estadual de Campinas (UNICAMP)</h3>
+                    <p><strong>Local:</strong> Campinas, SP</p>
+                    <p>Curso de Nutrição com forte ênfase em ciência e tecnologia.</p>
+                </div>
+                <div class="faculdade-item">
+                    <h3><i class="fas fa-university"></i> Universidade Federal de Minas Gerais (UFMG)</h3>
+                    <p><strong>Local:</strong> Belo Horizonte, MG</p>
+                    <p>Excelência em saúde e nutrição esportiva.</p>
+                </div>
+                <div class="faculdade-item">
+                    <h3><i class="fas fa-university"></i> Universidade Federal do Rio Grande do Sul (UFRGS)</h3>
+                    <p><strong>Local:</strong> Porto Alegre, RS</p>
+                    <p>Referência na região sul.</p>
+                </div>
+                <div class="faculdade-item">
+                    <h3><i class="fas fa-university"></i> Universidade Federal do Rio de Janeiro (UFRJ)</h3>
+                    <p><strong>Local:</strong> Rio de Janeiro, RJ</p>
+                    <p>Tradição e pesquisa de ponta.</p>
+                </div>
+                <div class="faculdade-item">
+                    <h3><i class="fas fa-university"></i> PUC-Campinas</h3>
+                    <p><strong>Local:</strong> Campinas, SP</p>
+                    <p>Uma das melhores particulares para a área da saúde.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Galeria -->
+        <section id="galeria" class="tab-content">
+            <h2 class="section-title">Galeria: Esporte & Nutrição</h2>
+            <div class="galeria-grid">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Corredor se hidratando">
+                <img src="https://images.unsplash.com/photo-1532384748853-8f54a8f476e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Alimentos saudáveis">
+                <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Atleta levantando peso">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tigela de smoothie">
+                <img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Mulher correndo ao ar livre">
+                <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Vegetais frescos">
+                <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Treino funcional">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Preparo de salada">
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Nutrição Esportiva Profissional.</p>
+        <div class="container">
+            <p>&copy; 2024 NutriEsporte - Um site informativo sobre Nutrição Esportiva. Imagens por Unsplash.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
