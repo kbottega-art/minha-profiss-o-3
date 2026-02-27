@@ -1,8 +1,10 @@
-:root {
-    --primary-color: #2e7d32;
-    --secondary-color: #1565c0;
-    --bg-light: #f4f7f6;
-    --text-dark: #333;
+::root {
+    --primary: #27ae60; /* Verde esporte */
+    --primary-dark: #1e8449;
+    --secondary: #f39c12; /* Laranja energia */
+    --dark: #2c3e50;
+    --light: #ecf0f1;
+    --gray: #95a5a6;
     --white: #ffffff;
 }
 
@@ -10,38 +12,370 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: var(--bg-light);
-    color: var(--text-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-}
-
-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
-    padding: 3rem 1rem;
-    text-align: center;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
 .container {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.gallery {
+/* Header & Navegação */
+header {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.destaque {
+    color: var(--secondary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+/* Main Content - Abas */
+.tab-content {
+    display: none;
+    padding: 40px 0;
+}
+
+.tab-content.active-content {
+    display: block;
+}
+
+/* Seções Comuns */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--dark);
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary);
+    border-radius: 2px;
+}
+
+/* Home (Hero) */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    min-height: 500px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    color: var(--dark);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+}
+
+/* Sobre */
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.lista-check {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.lista-check li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.lista-check i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.img-radius {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Cards (para Nota e Salario) */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-bottom: 5px solid var(--primary);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    color: var(--dark);
+    font-size: 1.5rem;
+}
+
+.dado-numero {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin: 15px 0;
+}
+
+.fonte {
+    text-align: right;
+    font-style: italic;
+    color: var(--gray);
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Como Ingressar */
+.ingressao-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.passos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.passo {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.passo-numero {
+    background-color: var(--primary);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.passo-conteudo h3 {
+    color: var(--dark);
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.passo-conteudo p {
+    color: #555;
+}
+
+.ingressao-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Faculdades */
+.faculdades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.faculdade-item {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--secondary);
+}
+
+.faculdade-item h3 {
+    color: var(--dark);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.faculdade-item i {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+.faculdade-item p {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Galeria */
+.galeria-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
-    margin-bottom: 2rem;
 }
 
-.gallery img {
+.galeria-grid img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .hero, .sobre-grid, .ingressao-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        order: 1;
+        text-align: center;
+    }
+
+    .hero-image {
+        order: 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .passo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
