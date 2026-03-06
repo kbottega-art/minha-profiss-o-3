@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NutriEsporte - Nutrição Esportiva</title>
+    <title>Nutrição Esportiva - Guia Completo da Profissão</title>
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Link para o CSS externo -->
@@ -22,7 +22,7 @@
                     <li><a href="#ingressao" data-tab="ingressao">Como Ingressar</a></li>
                     <li><a href="#faculdades" data-tab="faculdades">Faculdades</a></li>
                     <li><a href="#galeria" data-tab="galeria">Galeria</a></li>
-                    <li><a href="#comentarios" data-tab="comentarios"><i class="fas fa-comments"></i> Comentários</a></li>
+                    <li><a href="#comentarios" data-tab="comentarios">Comentários</a></li>
                 </ul>
             </nav>
         </div>
@@ -206,87 +206,200 @@
             </div>
         </section>
 
-        <!-- Seção de Comentários -->
+        <!-- Seção de Comentários (Estática) -->
         <section id="comentarios" class="tab-content">
-            <h2 class="section-title"><i class="fas fa-comments"></i> Comentários e Avaliações</h2>
+            <h2 class="section-title">Comentários e Avaliações</h2>
             
-            <div class="comentarios-container">
-                <!-- Estatísticas -->
-                <div class="comentarios-stats">
-                    <div class="stats-card">
-                        <div class="stats-numero">4.8</div>
-                        <div class="stats-estrelas">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+            <div class="comentarios-stats">
+                <i class="fas fa-star"></i> 4.9 · 1.247 avaliações · Última atualização: Março 2026
+            </div>
+
+            <!-- Lista de Comentários Estáticos -->
+            <div class="comentarios-lista">
+                <!-- Comentário 1 -->
+                <div class="comentario-card">
+                    <div class="comentario-header">
+                        <div class="comentario-avatar">RS</div>
+                        <div class="comentario-info">
+                            <div class="comentario-nome">Roberto Silva</div>
+                            <div class="comentario-data">
+                                <span><i class="far fa-calendar-alt"></i> 10/03/2026</span>
+                                <span class="comentario-profissao"><i class="fas fa-dumbbell"></i> Educador Físico</span>
+                            </div>
                         </div>
-                        <div class="stats-total">Baseado em 127 avaliações</div>
+                    </div>
+                    <div class="comentario-texto">
+                        "Excelente site! As informações sobre notas de corte do ENEM me ajudaram muito a orientar meus alunos que querem seguir na área de nutrição esportiva. Parabéns pelo conteúdo!"
+                    </div>
+                    <div class="comentario-avaliacao">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>Avaliação: 5/5</span>
                     </div>
                 </div>
 
-                <!-- Lista de Comentários -->
-                <div class="comentarios-lista" id="lista-comentarios">
-                    <!-- Os comentários serão carregados aqui via JavaScript -->
+                <!-- Comentário 2 -->
+                <div class="comentario-card">
+                    <div class="comentario-header">
+                        <div class="comentario-avatar">AC</div>
+                        <div class="comentario-info">
+                            <div class="comentario-nome">Ana Carolina Mendes</div>
+                            <div class="comentario-data">
+                                <span><i class="far fa-calendar-alt"></i> 05/03/2026</span>
+                                <span class="comentario-profissao"><i class="fas fa-graduation-cap"></i> Estudante de Nutrição</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comentario-texto">
+                        "Estou no 4º semestre de Nutrição e pretendo me especializar em esportiva. As informações sobre as faculdades e os passos para ingressar na carreira foram muito úteis. Obrigada!"
+                    </div>
+                    <div class="comentario-avaliacao">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>Avaliação: 5/5</span>
+                    </div>
                 </div>
 
-                <!-- Formulário para novo comentário -->
-                <div class="comentario-form">
-                    <h3><i class="fas fa-pencil-alt"></i> Deixe sua avaliação</h3>
-                    
-                    <form id="form-comentario">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label><i class="fas fa-user"></i> Nome completo *</label>
-                                <input type="text" id="nome" class="form-control" placeholder="Digite seu nome" required>
-                            </div>
-                            <div class="form-group">
-                                <label><i class="fas fa-envelope"></i> E-mail *</label>
-                                <input type="email" id="email" class="form-control" placeholder="Digite seu e-mail" required>
+                <!-- Comentário 3 -->
+                <div class="comentario-card">
+                    <div class="comentario-header">
+                        <div class="comentario-avatar">PL</div>
+                        <div class="comentario-info">
+                            <div class="comentario-nome">Paulo Lima</div>
+                            <div class="comentario-data">
+                                <span><i class="far fa-calendar-alt"></i> 28/02/2026</span>
+                                <span class="comentario-profissao"><i class="fas fa-briefcase"></i> Nutricionista</span>
                             </div>
                         </div>
+                    </div>
+                    <div class="comentario-texto">
+                        "Sou nutricionista há 8 anos e posso confirmar que as médias salariais apresentadas estão corretas. A área esportiva realmente tem um ótimo potencial de crescimento. Site muito bem elaborado!"
+                    </div>
+                    <div class="comentario-avaliacao">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>Avaliação: 5/5</span>
+                    </div>
+                </div>
 
-                        <div class="form-group">
-                            <label><i class="fas fa-tag"></i> Profissão / Área</label>
-                            <input type="text" id="profissao" class="form-control" placeholder="Ex: Estudante, Nutricionista, Atleta...">
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-star"></i> Sua avaliação *</label>
-                            <div class="rating-group" id="rating-group">
-                                <label class="rating-option">
-                                    <input type="radio" name="rating" value="1" required>
-                                    <span>1 ★</span>
-                                </label>
-                                <label class="rating-option">
-                                    <input type="radio" name="rating" value="2">
-                                    <span>2 ★★</span>
-                                </label>
-                                <label class="rating-option">
-                                    <input type="radio" name="rating" value="3">
-                                    <span>3 ★★★</span>
-                                </label>
-                                <label class="rating-option">
-                                    <input type="radio" name="rating" value="4">
-                                    <span>4 ★★★★</span>
-                                </label>
-                                <label class="rating-option">
-                                    <input type="radio" name="rating" value="5" checked>
-                                    <span>5 ★★★★★</span>
-                                </label>
+                <!-- Comentário 4 -->
+                <div class="comentario-card">
+                    <div class="comentario-header">
+                        <div class="comentario-avatar">MF</div>
+                        <div class="comentario-info">
+                            <div class="comentario-nome">Mariana Fernandes</div>
+                            <div class="comentario-data">
+                                <span><i class="far fa-calendar-alt"></i> 20/02/2026</span>
+                                <span class="comentario-profissao"><i class="fas fa-running"></i> Atleta</span>
                             </div>
                         </div>
+                    </div>
+                    <div class="comentario-texto">
+                        "Como atleta de crossfit, sempre tive curiosidade sobre o trabalho dos nutricionistas esportivos. O site me ajudou a entender melhor a importância desse profissional. Amei a galeria de fotos!"
+                    </div>
+                    <div class="comentario-avaliacao">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>Avaliação: 4.5/5</span>
+                    </div>
+                </div>
 
-                        <div class="form-group">
-                            <label><i class="fas fa-comment"></i> Seu comentário *</label>
-                            <textarea id="comentario" class="form-control" placeholder="Compartilhe sua opinião sobre a profissão ou sobre o site..." required></textarea>
+                <!-- Comentário 5 -->
+                <div class="comentario-card">
+                    <div class="comentario-header">
+                        <div class="comentario-avatar">CJ</div>
+                        <div class="comentario-info">
+                            <div class="comentario-nome">Carlos José</div>
+                            <div class="comentario-data">
+                                <span><i class="far fa-calendar-alt"></i> 15/02/2026</span>
+                                <span class="comentario-profissao"><i class="fas fa-school"></i> Professor</span>
+                            </div>
                         </div>
+                    </div>
+                    <div class="comentario-texto">
+                        "Uso as informações do site para orientar meus alunos do ensino médio que têm interesse na área da saúde. Muito completo e de fácil entendimento. Recomendo!"
+                    </div>
+                    <div class="comentario-avaliacao">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>Avaliação: 5/5</span>
+                    </div>
+                </div>
+            </div>
 
-                        <button type="submit" class="btn-comentar">
-                            <i class="fas fa-paper-plane"></i> Enviar Avaliação
-                        </button>
-                    </form>
+            <!-- Formulário de Avaliação (Apenas Visual) -->
+            <div class="avaliacao-form">
+                <h3><i class="fas fa-pencil-alt"></i> Deixe sua avaliação</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Nome completo</label>
+                        <input type="text" class="form-control" placeholder="Digite seu nome" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-envelope"></i> E-mail</label>
+                        <input type="email" class="form-control" placeholder="Digite seu e-mail" disabled>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-tag"></i> Profissão / Área de atuação</label>
+                    <input type="text" class="form-control" placeholder="Ex: Estudante, Nutricionista, Atleta..." disabled>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-star"></i> Sua avaliação</label>
+                    <div class="rating-group">
+                        <label class="rating-option">
+                            <input type="radio" name="rating" disabled>
+                            <span>1 ★</span>
+                        </label>
+                        <label class="rating-option">
+                            <input type="radio" name="rating" disabled>
+                            <span>2 ★★</span>
+                        </label>
+                        <label class="rating-option">
+                            <input type="radio" name="rating" disabled>
+                            <span>3 ★★★</span>
+                        </label>
+                        <label class="rating-option">
+                            <input type="radio" name="rating" disabled>
+                            <span>4 ★★★★</span>
+                        </label>
+                        <label class="rating-option">
+                            <input type="radio" name="rating" disabled>
+                            <span>5 ★★★★★</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-comment"></i> Seu comentário</label>
+                    <textarea class="form-control" placeholder="Compartilhe sua opinião sobre a profissão ou sobre o site..." disabled></textarea>
+                </div>
+
+                <button class="btn-avaliar" disabled>
+                    <i class="fas fa-paper-plane"></i> Enviar Avaliação
+                </button>
+
+                <div class="aviso-msg">
+                    <i class="fas fa-info-circle"></i>
+                    <p><strong>Área de demonstração:</strong> Esta seção de comentários é apenas ilustrativa. Em breve, você poderá interagir com a comunidade!</p>
                 </div>
             </div>
         </section>
@@ -294,10 +407,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 NutriEsporte - Um site informativo sobre Nutrição Esportiva. Imagens por Unsplash.</p>
-            <p style="margin-top: 10px; font-size: 0.9rem;">
-                <i class="fas fa-heart" style="color: var(--secondary);"></i> Compartilhe sua opinião nos comentários!
-            </p>
+            <p>&copy; 2026 NutriEsporte - Guia completo sobre Nutrição Esportiva. Imagens por Unsplash.</p>
         </div>
     </footer>
 
