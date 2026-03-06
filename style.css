@@ -6,7 +6,6 @@
     --light: #ecf0f1;
     --gray: #95a5a6;
     --white: #ffffff;
-    --shadow: 0 10px 30px rgba(0,0,0,0.1);
     --comment-bg: #f8f9fa;
     --comment-border: #e9ecef;
 }
@@ -21,8 +20,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4
-
+    background-color: #f4f4f4;
 }
 
 .container {
@@ -335,6 +333,298 @@ nav ul li a.active {
     box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 }
 
+/* ===== SEÇÃO DE COMENTÁRIOS ===== */
+.comentarios-section {
+    margin-top: 60px;
+    padding: 40px 0;
+    background-color: var(--comment-bg);
+    border-radius: 20px;
+}
+
+.comentarios-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.comentarios-titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.comentarios-titulo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.comentarios-stats {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--gray);
+    font-size: 1.1rem;
+}
+
+.comentarios-stats i {
+    color: var(--secondary);
+    margin-right: 5px;
+}
+
+/* Lista de Comentários */
+.comentarios-lista {
+    margin-bottom: 40px;
+}
+
+.comentario-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--primary);
+    transition: transform 0.3s;
+}
+
+.comentario-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.comentario-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.comentario-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    box-shadow: 0 3px 10px rgba(39, 174, 96, 0.3);
+}
+
+.comentario-info {
+    flex: 1;
+}
+
+.comentario-nome {
+    font-weight: bold;
+    color: var(--dark);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.comentario-data {
+    color: var(--gray);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.comentario-data i {
+    margin-right: 5px;
+    font-size: 0.8rem;
+}
+
+.comentario-profissao {
+    background-color: var(--light);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--dark);
+}
+
+.comentario-texto {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding-left: 65px; /* Alinhamento com o avatar */
+}
+
+.comentario-avaliacao {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 65px;
+}
+
+.comentario-avaliacao i {
+    color: var(--secondary);
+    font-size: 1.1rem;
+}
+
+.comentario-avaliacao span {
+    margin-left: 10px;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+/* Formulário de Comentário */
+.comentario-form {
+    background: linear-gradient(135deg, var(--white), #fafafa);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid var(--comment-border);
+}
+
+.comentario-form h3 {
+    color: var(--dark);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comentario-form h3 i {
+    color: var(--primary);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group label i {
+    color: var(--primary);
+    margin-right: 8px;
+    width: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--comment-border);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.rating-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rating-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.rating-option input[type="radio"] {
+    display: none;
+}
+
+.rating-option span {
+    padding: 8px 15px;
+    border: 2px solid var(--comment-border);
+    border-radius: 30px;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+}
+
+.rating-option input[type="radio"]:checked + span {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+.rating-option:hover span {
+    border-color: var(--primary);
+}
+
+.btn-comentar {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-comentar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(39, 174, 96, 0.4);
+}
+
+.btn-comentar i {
+    font-size: 1.2rem;
+}
+
+/* Mensagem de agradecimento (estática) */
+.agradecimento-msg {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(243, 156, 18, 0.1));
+    border-radius: 15px;
+    color: var(--dark);
+    font-style: italic;
+    border: 1px dashed var(--primary);
+}
+
+.agradecimento-msg i {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
 /* Footer */
 footer {
     background-color: var(--dark);
@@ -383,3 +673,61 @@ footer {
         align-items: center;
         text-align: center;
     }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .comentario-texto {
+        padding-left: 0;
+    }
+
+    .comentario-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .comentario-avatar {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .comentario-avaliacao {
+        padding-left: 0;
+        justify-content: center;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.comentario-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
