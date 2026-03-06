@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutrição Esportiva</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome para ícones (opcional, mas usado) -->
+    <title>NutriEsporte - Nutrição Esportiva</title>
+    <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1><i class="fas fa-apple-alt"></i> Nutri<span class="destaque">Champ</span></h1>
+            <h1><i class="fas fa-apple-alt"></i> Nutri<span class="destaque">Esporte</span></h1>
             <nav>
                 <ul>
                     <li><a href="#home" class="active" data-tab="home">Home</a></li>
@@ -21,6 +22,7 @@
                     <li><a href="#ingressao" data-tab="ingressao">Como Ingressar</a></li>
                     <li><a href="#faculdades" data-tab="faculdades">Faculdades</a></li>
                     <li><a href="#galeria" data-tab="galeria">Galeria</a></li>
+                    <li><a href="#comentarios" data-tab="comentarios"><i class="fas fa-comments"></i> Comentários</a></li>
                 </ul>
             </nav>
         </div>
@@ -193,6 +195,7 @@
         <section id="galeria" class="tab-content">
             <h2 class="section-title">Galeria: Esporte & Nutrição</h2>
             <div class="galeria-grid">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Corredor se hidratando">
                 <img src="https://images.unsplash.com/photo-1532384748853-8f54a8f476e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Alimentos saudáveis">
                 <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Atleta levantando peso">
                 <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tigela de smoothie">
@@ -202,14 +205,103 @@
                 <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Preparo de salada">
             </div>
         </section>
+
+        <!-- Seção de Comentários -->
+        <section id="comentarios" class="tab-content">
+            <h2 class="section-title"><i class="fas fa-comments"></i> Comentários e Avaliações</h2>
+            
+            <div class="comentarios-container">
+                <!-- Estatísticas -->
+                <div class="comentarios-stats">
+                    <div class="stats-card">
+                        <div class="stats-numero">4.8</div>
+                        <div class="stats-estrelas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="stats-total">Baseado em 127 avaliações</div>
+                    </div>
+                </div>
+
+                <!-- Lista de Comentários -->
+                <div class="comentarios-lista" id="lista-comentarios">
+                    <!-- Os comentários serão carregados aqui via JavaScript -->
+                </div>
+
+                <!-- Formulário para novo comentário -->
+                <div class="comentario-form">
+                    <h3><i class="fas fa-pencil-alt"></i> Deixe sua avaliação</h3>
+                    
+                    <form id="form-comentario">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-user"></i> Nome completo *</label>
+                                <input type="text" id="nome" class="form-control" placeholder="Digite seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-envelope"></i> E-mail *</label>
+                                <input type="email" id="email" class="form-control" placeholder="Digite seu e-mail" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fas fa-tag"></i> Profissão / Área</label>
+                            <input type="text" id="profissao" class="form-control" placeholder="Ex: Estudante, Nutricionista, Atleta...">
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fas fa-star"></i> Sua avaliação *</label>
+                            <div class="rating-group" id="rating-group">
+                                <label class="rating-option">
+                                    <input type="radio" name="rating" value="1" required>
+                                    <span>1 ★</span>
+                                </label>
+                                <label class="rating-option">
+                                    <input type="radio" name="rating" value="2">
+                                    <span>2 ★★</span>
+                                </label>
+                                <label class="rating-option">
+                                    <input type="radio" name="rating" value="3">
+                                    <span>3 ★★★</span>
+                                </label>
+                                <label class="rating-option">
+                                    <input type="radio" name="rating" value="4">
+                                    <span>4 ★★★★</span>
+                                </label>
+                                <label class="rating-option">
+                                    <input type="radio" name="rating" value="5" checked>
+                                    <span>5 ★★★★★</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fas fa-comment"></i> Seu comentário *</label>
+                            <textarea id="comentario" class="form-control" placeholder="Compartilhe sua opinião sobre a profissão ou sobre o site..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-comentar">
+                            <i class="fas fa-paper-plane"></i> Enviar Avaliação
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 NutriEsporte - Um site informativo sobre Nutrição Esportiva. Imagens por Unsplash.</p>
+            <p>&copy; 2026 NutriEsporte - Um site informativo sobre Nutrição Esportiva. Imagens por Unsplash.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                <i class="fas fa-heart" style="color: var(--secondary);"></i> Compartilhe sua opinião nos comentários!
+            </p>
         </div>
     </footer>
 
+    <!-- Link para o JavaScript externo -->
     <script src="script.js"></script>
 </body>
 </html>
