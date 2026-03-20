@@ -13,8 +13,8 @@
     --text-muted: #6b6b8f;
     
     /* Cores de destaque - Gradiente neon */
-    --accent-primary: #00ffc6;      /* Verde água neon */
-    --accent-secondary: #00b8ff;    /* Azul neon */
+    --accent-primary: #0b5041;      /* Verde água neon */
+    --accent-secondary: #1b4f64;    /* Azul neon */
     --accent-purple: #a855f7;       /* Roxo */
     --accent-pink: #ec489a;          /* Rosa */
     --accent-glow: rgba(0, 255, 198, 0.2);
