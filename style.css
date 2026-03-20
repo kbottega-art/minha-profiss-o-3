@@ -20,7 +20,7 @@
     --accent-glow: rgba(0, 255, 198, 0.2);
     
     /* Gradientes */
-    --gradient-primary: linear-gradient(135deg, #00ffc6 0%, #00b8ff 100%);
+    --gradient-primary: linear-gradient(135deg, #2c554c 0%, #00b8ff 100%);
     --gradient-secondary: linear-gradient(135deg, #a855f7 0%, #ec489a 100%);
     --gradient-dark: linear-gradient(135deg, #13132b 0%, #0a0a1a 100%);
     
